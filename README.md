@@ -14,7 +14,6 @@ This was a personal challenge to make a simple web based utility. I learned a lo
 ### JavaScript
 
 - All code is found in the `scripts` directory.
-- Code is organized in a module style by treating `
 
 ## Mobile Screens
 
