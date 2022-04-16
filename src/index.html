@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./scripts/main.js" type="module"></script>
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <h1 class="title">Stopwatch</h1>
+    <button type="button" id="themeToggle" class="themeButton">Theme</button>
+    <div class="stopwatchDisplayContainer">
+      <div id="timeElement" class="timerContainer timeDisplay">
+        <span id="hours"> 00 </span>: <span id="minutes"> 00 </span>:
+        <span id="seconds"> 00 </span>:
+        <small class="decisecondDisplay"
+          ><span id="decisecond"> 00 </span></small
+        >
+      </div>
+
+      <div id="stopwatchControls" class="controlsContainer">
+        <button id="start" type="button" class="controlButton">Start</button>
+        <button id="stop" type="button" class="controlButton">Stop</button>
+        <button id="reset" type="button" class="controlButton resetButton">
+          Reset
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

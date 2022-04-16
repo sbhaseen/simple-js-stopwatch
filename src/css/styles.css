@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: hsl(0, 0%, 10%);
+  --text-primary: hsl(0, 0%, 85%);
+  --highlight-danger: coral;
+  --highlight-primary: hsl(210, 17%, 34%);
+  --accent-primary: hsl(0, 0%, 45%);
+  --accent-secondary: hsl(191, 50%, 18%);
+  --brightness-filter: brightness(150%);
+}
+
+.light {
+  --bg-color: hsl(0, 0%, 100%);
+  --text-primary: hsl(0, 0%, 15%);
+  --highlight-danger: coral;
+  --highlight-primary: lightblue;
+  --accent-primary: hsl(0, 0%, 45%);
+  --accent-secondary: hsl(195, 60%, 18%);
+  --brightness-filter: brightness(80%);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.125rem;
+  padding: 1rem 2rem;
+  font-size: large;
+  background-color: hsl(240, 10%, 92%);
+}
+
+.themeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 0.1875rem;
+  border-color: var(--accent-primary);
+  color: var(--text-primary);
+  font-size: 2rem;
+}
+
+.title {
+  font-size: clamp(2rem, 10vw, 4rem);
+  margin-bottom: 2rem;
+}
+
+.stopwatchDisplayContainer {
+  width: 100%;
+}
+
+.timerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.timeDisplay {
+  font-family: "Major Mono Display", monospace;
+  font-size: clamp(2rem, 10vw, 6rem);
+}
+
+.decisecondDisplay {
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+
+.controlsContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.controlButton {
+  flex-grow: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.125ch;
+
+  background-color: var(--highlight-primary);
+  color: var(--text-primary);
+
+  transition-property: background-color, color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.controlButton:hover,
+.controlButton:focus {
+  background-color: var(--text-primary);
+  color: var(--highlight-primary);
+}
+
+.resetButton {
+  background-color: var(--accent-secondary);
+  color: var(--highlight-danger);
+}
+
+.resetButton:hover,
+.resetButton:focus {
+  background-color: var(--highlight-danger);
+  color: var(--accent-secondary);
+}
+
+@media screen and (min-width: 768px) {
+  .stopwatchDisplayContainer {
+    max-width: 75vw;
+  }
+
+  .controlsContainer {
+    flex-direction: row;
+  }
+}
