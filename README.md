@@ -6,8 +6,6 @@ This was a personal challenge to make a simple web based utility. I learned a lo
 
 ## Dev Details
 
-All files can be found in the `src` directory.
-
 ### Styles
 
 - All styles are located in the directory `css`, in the file `styles.css`.
